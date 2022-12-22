@@ -68,9 +68,9 @@ public class ArrayListDemo {
     
     public void removeE(List<String> list){
         System.out.println("List before remove: ");
-        for (String list1 : list) {
-            System.out.print(list1+" ");
-        }
+        Iterator<String> it = list.iterator();
+        it.forEachRemaining(s -> System.out.print(s+" "));
+        
         list.remove(3);
         System.out.println("");
         System.out.println("List after remove index 3: ");
@@ -99,6 +99,17 @@ public class ArrayListDemo {
         for (String list1 : list) {
             System.out.print(list1 +" ");
         }
+    }
+    
+    public void containE (List<String> list){
+        System.out.println("List contain 'A': "+list.contains("A"));
+        
+        List<String> list2 = new ArrayList<>();
+        list2.add("H");
+        list2.add("E");
+        
+        System.out.println("List contain list (including F B) : "+ list.containsAll(list2));
+        
     }
     public static void main(String[] args) {
         ArrayListDemo arrayListDemo = new ArrayListDemo();
@@ -139,7 +150,10 @@ public class ArrayListDemo {
         System.out.println("REMOVE---------------------------");
         arrayListDemo.removeE(list);
         
-        
+        //contain
+        System.out.println("");
+        System.out.println("CONTAIN--------------------------");
+        arrayListDemo.containE(list);
         
         
         
