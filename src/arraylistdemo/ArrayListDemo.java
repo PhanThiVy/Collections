@@ -6,7 +6,13 @@
 package arraylistdemo;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -36,6 +42,29 @@ public class ArrayListDemo {
             System.out.print(l+ " ");
         }
     }
+    
+    public void getValue(List<String> list){
+        System.out.println("Get value at index 4: "+ list.get(4));
+        
+        System.out.println("the first position of value 'H': "+ list.indexOf("H"));
+        
+        System.out.println("the last positon of value 'C': "+ list.lastIndexOf("C"));
+    }
+    
+    public void setValue(List<String> list){
+        list.set(2, "R");
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()) {            
+            System.out.print(it.next()+" ");
+        }
+    }
+//    public void sortList(List<String> list){
+//        Collections.sort(list);
+//        ListIterator<String> li = list.listIterator(list.size());
+//        while (li.hasPrevious()) {            
+//            System.out.print(li.previous() +" ");
+//        }
+//    }
     public static void main(String[] args) {
         ArrayListDemo arrayListDemo = new ArrayListDemo();
         //create a new list
@@ -56,7 +85,23 @@ public class ArrayListDemo {
         System.out.println("CLONE----------------------------");
         arrayListDemo.cloneList((ArrayList<String>) list);
         
-        //
+        //get value
+        System.out.println("");
+        System.out.println("GET------------------------------");
+        arrayListDemo.getValue(list);
+        
+        //set value
+        System.out.println("SET------------------------------");
+        arrayListDemo.setValue(list);
+        
+        //sort
+        System.out.println("");
+        System.out.println("SORT-----------------------------");
+        arrayListDemo.sortList(list);
+        
+        //remove
+        
+        
         
         
         
