@@ -47,6 +47,23 @@ public class LinkedListDemo {
             System.out.print(l+ " ");
         }
         
+        //remove first
+        li.removeFirst();
+        System.out.println("");
+        System.out.println("After removeFirst(): ");
+        for (Integer l : li) {
+            System.out.print(l+ " ");
+        }
+        
+        li.removeLast();
+        System.out.println("");
+        System.out.println("After removeLast(): ");
+        for (Integer l : li) {
+            System.out.print(l+ " ");
+        }
+        
+        
+        
         
         
     }
