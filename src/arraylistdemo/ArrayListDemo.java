@@ -58,13 +58,13 @@ public class ArrayListDemo {
             System.out.print(it.next()+" ");
         }
     }
-//    public void sortList(List<String> list){
-//        Collections.sort(list);
-//        ListIterator<String> li = list.listIterator(list.size());
-//        while (li.hasPrevious()) {            
-//            System.out.print(li.previous() +" ");
-//        }
-//    }
+    public void sortList(List<String> list){
+        Collections.sort(list);
+        ListIterator<String> li = list.listIterator(list.size());
+        while (li.hasPrevious()) {            
+            System.out.print(li.previous() +" ");
+        }
+    }
     public static void main(String[] args) {
         ArrayListDemo arrayListDemo = new ArrayListDemo();
         //create a new list
