@@ -65,6 +65,41 @@ public class ArrayListDemo {
             System.out.print(li.previous() +" ");
         }
     }
+    
+    public void removeE(List<String> list){
+        System.out.println("List before remove: ");
+        for (String list1 : list) {
+            System.out.print(list1+" ");
+        }
+        list.remove(3);
+        System.out.println("");
+        System.out.println("List after remove index 3: ");
+        for (String list1 : list) {
+            System.out.print(list1+" ");
+        }
+        
+        list.remove("H");
+        System.out.println("");
+        System.out.println("List after remove 'H': ");
+        for (String list1 : list) {
+            System.out.print(list1+" ");
+        }
+        List<String> list2 = new ArrayList<>();
+        list2.add("F");
+        list2.add("B");
+        list.removeAll(list2);
+        System.out.println("");
+        System.out.println("List after removeAll: ");
+        for (String list1 : list) {
+            System.out.print(list1+ " ");
+        }
+        list.removeIf(s -> s.equals("D"));
+        System.out.println("");
+        System.out.println("List after remove element equals 'D': ");
+        for (String list1 : list) {
+            System.out.print(list1 +" ");
+        }
+    }
     public static void main(String[] args) {
         ArrayListDemo arrayListDemo = new ArrayListDemo();
         //create a new list
@@ -100,6 +135,9 @@ public class ArrayListDemo {
         arrayListDemo.sortList(list);
         
         //remove
+        System.out.println("");
+        System.out.println("REMOVE---------------------------");
+        arrayListDemo.removeE(list);
         
         
         
