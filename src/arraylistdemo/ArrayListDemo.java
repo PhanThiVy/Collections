@@ -116,10 +116,15 @@ public class ArrayListDemo {
 
     public void toArrayMethod(List<String> list) {
         String[] a2 = list.toArray(new String[list.size()]);
-        System.out.println("Array:");
         for (String a : a2) {
-            System.out.print(a+" ");
+            System.out.print(a + " ");
         }
+    }
+
+    public void subListMethod(List<String> list) {
+        List<String> subList = list.subList(1, 3);
+        Iterator<String> it = subList.iterator();
+        it.forEachRemaining(s -> System.out.print(s +" "));
     }
 
     public static void main(String[] args) {
@@ -165,9 +170,15 @@ public class ArrayListDemo {
         System.out.println("");
         System.out.println("CONTAIN--------------------------");
         arrayListDemo.containE(list);
-        
+
         //toarray
+        System.out.println("TOARRAY--------------------------");
         arrayListDemo.toArrayMethod(list);
+        
+        //SubList
+        System.out.println("");
+        System.out.println("SUBLIST--------------------------");
+        arrayListDemo.subListMethod(list);
 
     }
 
